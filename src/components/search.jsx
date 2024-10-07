@@ -6,7 +6,7 @@ const Search = () => {
                     <div class="w-full h-2 ml-10 mt-3" id="where">Where</div><input
                         type="text"
                         placeholder="Search destinations?"
-                        class="w-2/3 h-2 pl-10 rounded-md ml-10 "
+                        class="w-48 h-5 pl-10 rounded-md mt-2 bg-red-200 ml-2 justify-self-start"
                         id="location"
                     />
                 </div>
@@ -24,8 +24,8 @@ const Search = () => {
                 </a>
                 <a href="#" id="s-b" class=" flex justify-center items-center"><i class="bx bx-search"></i></a>
             </div>
-                
-            
+
+
         </section>
     );
 };
