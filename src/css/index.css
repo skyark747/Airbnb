@@ -98,3 +98,17 @@
     width: 3rem;
     height: 3rem;
 }
+
+#b {
+    border-width: 1px;
+}
+
+#b:hover {
+    box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.2);
+}
+
+#slider:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgba(0, 0, 0, 0.2);
+}
