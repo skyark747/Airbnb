@@ -1,7 +1,7 @@
 const Navbar = ({ Navbuttons }) => {
     return (
         <>
-            <div class="bg-white w-full h-20 flex justify-between">
+            <div class="bg-white w-full h-20 flex justify-between ">
                 <div class="flex items-center w-48 h-full ml-10">
                     <img src="/airbnb-logo-icon-png-svg.png" alt="airbnb logo" class="w-8 h-8 ml-10" ></img>
                     <span class="flex text-2xl font-bold" id="logo">airbnb</span>

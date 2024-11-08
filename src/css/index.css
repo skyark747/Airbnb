@@ -1,5 +1,5 @@
 #logo {
-    color: rgb(224, 47, 106);
+    color: rgb(255, 4, 88);
     padding-left: 1rem;
 }
 
@@ -75,7 +75,9 @@
 #l-box {
     position: relative;
 }
-
+#l-box:hover #location{
+    background-color: rgb(245, 241, 241);
+}
 #l-box::after {
     content: '';
     position: absolute;
@@ -91,7 +93,7 @@
 }
 
 #s-b {
-    background-color: rgb(221, 73, 123);
+    background-color: rgb(255, 0, 85);
     border-radius: 50px;
     margin-left: 3rem;
     margin-top: 0.5rem;
@@ -112,3 +114,12 @@
     text-decoration-thickness: 3px;
     text-decoration-color: rgba(0, 0, 0, 0.2);
 }
+#slide-image{
+    display: none;
+    transition: 0.3s ease-in-out;
+}
+#image-slider:hover #slide-image{
+    transition: 0.3s ease-in-out;
+    display: block;
+}
+
