@@ -1,7 +1,7 @@
-const OMG = [
+[
     {
         "place": "Tokyo, Japan",
-        "stay_details": "20,000 kilometers", 
+        "stay_details": "20,000 kilometers",
         "rating": 4.84,
         "price_per_night": 43,
         "date": "Nov 2–7",
@@ -48,8 +48,8 @@ const OMG = [
             "https://a0.muscache.com/im/pictures/27331726-bf50-40dd-8abc-ca9643f8f663.jpg?im_w=1440",
             "https://a0.muscache.com/im/pictures/8efb200c-6dcb-460d-a367-caa511506077.jpg?im_w=1200",
             "https://a0.muscache.com/im/pictures/ae1b48e9-24e9-43fb-93f5-1c683d76259a.jpg?im_w=1440",
-            "https://a0.muscache.com/im/pictures/e3ebda9a-3268-4ec8-9903-98f85f0bf767.jpg?im_w=1440",
-            
+            "https://a0.muscache.com/im/pictures/e3ebda9a-3268-4ec8-9903-98f85f0bf767.jpg?im_w=1440"
+
         ]
     },
     {
@@ -101,8 +101,8 @@ const OMG = [
             "https://a0.muscache.com/im/pictures/7b8adfa3-299f-4833-99e4-9a3d33ac255e.jpg?im_w=1440",
             "https://a0.muscache.com/im/pictures/344295da-0e0e-4472-8efc-9ea6c3318915.jpg?im_w=1440",
             "https://a0.muscache.com/im/pictures/d7f35202-60f9-4ccb-b4b0-519d3ab7f0bf.jpg?im_w=1440",
-            "https://a0.muscache.com/im/pictures/56f019de-ac98-49f8-8322-546c43ea2502.jpg?im_w=1440",
-            
+            "https://a0.muscache.com/im/pictures/56f019de-ac98-49f8-8322-546c43ea2502.jpg?im_w=1440"
+
         ]
     },
     {
@@ -154,10 +154,8 @@ const OMG = [
             "https://a0.muscache.com/im/pictures/miso/Hosting-713793474951553871/original/46ea7c23-7bd3-4f22-8094-4dc52fe9d2bf.jpeg?im_w=1440",
             "https://a0.muscache.com/im/pictures/miso/Hosting-713793474951553871/original/2ac03203-3d06-441c-bc82-77f28ac26c6a.jpeg?im_w=1200",
             "https://a0.muscache.com/im/pictures/miso/Hosting-713793474951553871/original/dcf779d0-ab1f-4e2d-acef-317ca6cd71ce.jpeg?im_w=1440",
-            "https://a0.muscache.com/im/pictures/miso/Hosting-713793474951553871/original/dcf779d0-ab1f-4e2d-acef-317ca6cd71ce.jpeg?im_w=1440",
-            
+            "https://a0.muscache.com/im/pictures/miso/Hosting-713793474951553871/original/dcf779d0-ab1f-4e2d-acef-317ca6cd71ce.jpeg?im_w=1440"
+
         ]
     }
 ]
-
-export default OMG;

@@ -8,26 +8,13 @@ import { BiBed, BiCoffee } from 'react-icons/bi'; // Bed Icons
 import { FaTicketAlt, FaFilm } from 'react-icons/fa'; // Ticket Icons
 import { MdPlace } from 'react-icons/md'; // Place Icons
 import { GiCastle, GiHouse, GiMountainCave, GiAlienSkull, GiTowerBridge, GiAlienBug } from 'react-icons/gi'; // Game Icons
-import ItemList from "./ItemList";
-import Rooms from "../jsfiles/Homepage";
-import Breakfast from "../jsfiles/Breakfast";
-import Mansion from "../jsfiles/Mansion";
 import Listings from "../jsfiles/Context";
-import Icons from "../jsfiles/Icons";
-import Cabins from "../jsfiles/Cabins";
-import Castles from "../jsfiles/Castles";
-import Caves from "../jsfiles/Caves";
-import OMG from "../jsfiles/Omg";
-import Views from "../jsfiles/Views";
-import Cities from "../jsfiles/Cities";
-
-
 
 
 const Filter = () => {
     const slider = useRef(null);
     const [value, Setvalue] = useState('');
-    const {Filteritems,setFilterItems} = useContext(Listings);
+    const { Filteritems, setFilterItems } = useContext(Listings);
     var settings = {
         dots: false,
         infinite: true,
@@ -50,7 +37,7 @@ const Filter = () => {
             icon: <MdPlace style={{ fontSize: "1.5rem" }} />,
         },
         {
-            name: "Amazing Views",
+            name: "Amazing",
             icon: <FaFilm style={{ fontSize: "1.5rem" }} />,
         },
         {
@@ -79,40 +66,52 @@ const Filter = () => {
         },
     ];
 
+    async function getlisting(name) {
+        try {
+
+            const path = `http://localhost:3000/api/listings/${name}`;
+
+            const res = await fetch(path);
+            const data = await res.json();
+            setFilterItems(data);
+        } catch (err) {
+            console.error(err);
+        }
+    };
     function handleClick(item) {
         switch (item) {
             case "Rooms":
-                setFilterItems(Rooms);
+                getlisting('Rooms');
                 break;
             case "Bed & Breakfast":
-                setFilterItems(Breakfast);
+                getlisting('Breakfast');
                 break;
             case "Mansions":
-                setFilterItems(Mansion);
+                getlisting('Mansion');
                 break;
             case "Icons":
-                setFilterItems(Icons);
+                getlisting('Icons');
                 break;
             case "Top Cities":
-                setFilterItems(Cities);
+                getlisting('Cities');
                 break;
-            case "Amazing Views":
-                setFilterItems(Views);
+            case "Amazing":
+                getlisting('Views');
                 break;
             case "Cabins":
-                setFilterItems(Cabins);
+                getlisting('Cabins');
                 break;
             case "Caves":
-                setFilterItems(Caves);
+                getlisting('Caves');
                 break;
             case "Castles":
-                setFilterItems(Castles);
+                getlisting('Castles');
                 break;
             case "OMG!":
-                setFilterItems(OMG);
+                getlisting('Omg');
                 break;
             default:
-                setFilterItems(Rooms);
+                getlisting('Rooms');
                 break;
         }
     }
@@ -120,37 +119,37 @@ const Filter = () => {
     useEffect(() => {
         handleClick(value);
     }, [value]);
-    
+
 
     return (
         <>
-        <div className="filter" class='flex w-full h-24'>
-            <div class='w-3/4 h-16 ml-2 flex items-center mt-3 justify-center content-center'>
-                <button onClick={() => slider.current.slickPrev()} class='w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out' id="b"><i class='bx bx-chevron-left'></i></button>
-                <div class="flex w-5/6 h-full space-x-14 justify-around items-center content-center" >
-                    <div className="w-full h-full">
-                        <Slider ref={slider} {...settings}>
-                            {
-                                Items.map((item, index) => (
+            <div className="filter" class='flex w-full h-24'>
+                <div class='w-3/4 h-16 ml-2 flex items-center mt-3 justify-center content-center'>
+                    <button onClick={() => slider.current.slickPrev()} class='w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out' id="b"><i class='bx bx-chevron-left'></i></button>
+                    <div class="flex w-5/6 h-full space-x-14 justify-around items-center content-center" >
+                        <div className="w-full h-full">
+                            <Slider ref={slider} {...settings}>
+                                {
+                                    Items.map((item, index) => (
 
-                                    <a href="#" key={index} onClick={(e) => Setvalue(e.currentTarget.textContent)} className="w-12 h-12 justify-center items-center align-center ml-10" id="slider">
-                                        <div className="w-6 h-6 ml-2">{item.icon}</div>
-                                        <p className="font-semibold text-sm text-gray-500 mt-2">{item.name}</p>
-                                    </a>
-                                ))
+                                        <a href="#" key={index} onClick={(e) => Setvalue(e.currentTarget.textContent)} className="w-12 h-12 justify-center items-center align-center ml-10" id="slider">
+                                            <div className="w-6 h-6 ml-2">{item.icon}</div>
+                                            <p className="font-semibold text-sm text-gray-500 mt-2">{item.name}</p>
+                                        </a>
+                                    ))
 
-                            }
-                        </Slider>
+                                }
+                            </Slider>
+                        </div>
+
                     </div>
+                    <button onClick={() => slider.current.slickNext()} class='w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out' id="b"><i class='bx bx-chevron-right'></i></button>
 
                 </div>
-                <button onClick={() => slider.current.slickNext()} class='w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out' id="b"><i class='bx bx-chevron-right'></i></button>
+                <button className="w-24 h-12 mt-3 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center" ><FiFilter />Filters</button>
 
+                <button className="w-52 h-12 mt-3 rounded-xl border-1 border-gray-300 text-sm ml-4 hover:bg-customgray hover:border-black" >Display total before taxes</button>
             </div>
-            <button className="w-24 h-12 mt-3 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center" ><FiFilter />Filters</button>
-
-            <button className="w-52 h-12 mt-3 rounded-xl border-1 border-gray-300 text-sm ml-4 hover:bg-customgray hover:border-black" >Display total before taxes</button>
-        </div>
         </>
     );
 }

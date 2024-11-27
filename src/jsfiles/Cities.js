@@ -1,4 +1,4 @@
-const Cities = [
+[
     {
         "place": "Meleodganj/Dharmsala, India",
         "stay_details": "Hosted by Dev Raj",
@@ -157,5 +157,3 @@ const Cities = [
         ]
     }
 ]
-
-export default Cities;

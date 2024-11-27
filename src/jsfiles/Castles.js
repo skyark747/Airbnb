@@ -1,4 +1,4 @@
-const Castles = [
+[
     {
         "place": "Boppalapuram, India",
         "stay_details": "2,113 kilometers",
@@ -144,5 +144,3 @@ const Castles = [
         ]
     }
 ]
-
-export default Castles;

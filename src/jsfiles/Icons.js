@@ -1,4 +1,4 @@
-const Icons = [
+[
     {
         "place": "Haunt the Beetlejuice house",
         "stay_details": "Hosted by Deelia Deetz",
@@ -135,5 +135,3 @@ const Icons = [
         ]
     }
 ]
-
-export default Icons;

@@ -1,4 +1,4 @@
-const Breakfast = [
+[
     {
         "place": "Meleodganj/Dharmsala, India",
         "stay_details": "Hosted by Dev Raj",
@@ -168,5 +168,3 @@ const Breakfast = [
         ]
     }
 ]
-
-export default Breakfast;

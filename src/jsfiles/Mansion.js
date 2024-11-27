@@ -1,4 +1,4 @@
-const Mansion = [
+[
     {
         "place": "Malkarne, India",
         "rating": "",
@@ -71,7 +71,7 @@ const Mansion = [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MzQ4ODg0MDk3MjEyMjg4Ng%3D%3D/original/872bebbc-c603-4a3b-99e5-ac760f494946.jpeg?im_w=720&im_format=avif",
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MzQ4ODg0MDk3MjEyMjg4Ng%3D%3D/original/d340aa29-a24e-4507-99e0-1422099ac920.jpeg?im_w=720&im_format=avif",
             "https://a0.muscache.com/im/pictures/miso/Hosting-1163488840972122886/original/3c0549de-92d5-4364-92bc-03df08f6195b.jpeg?im_w=720&im_format=avif",
-            "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MzQ4ODg0MDk3MjEyMjg4Ng%3D%3D/original/21d049ff-b142-4c87-9cdc-25e2ac89c390.jpeg?im_w=720&im_format=avif",
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MzQ4ODg0MDk3MjEyMjg4Ng%3D%3D/original/21d049ff-b142-4c87-9cdc-25e2ac89c390.jpeg?im_w=720&im_format=avif"
             
         ]
     },
@@ -181,5 +181,3 @@ const Mansion = [
         ]
     }
 ]
-
-export default Mansion;

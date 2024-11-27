@@ -1,4 +1,4 @@
-const Caves = [
+[
     {
         "place": "Chengalpattu, India",
         "stay_details": "2,119 kilometers",
@@ -156,5 +156,3 @@ const Caves = [
         ]
     }
 ]
-
-export default Caves;

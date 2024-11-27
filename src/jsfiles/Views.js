@@ -1,4 +1,4 @@
-const Views = [
+[
     {
         "place": "Meleodganj/Dharmsala, India",
         "stay_details": "Hosted by Dev Raj",
@@ -50,7 +50,7 @@ const Views = [
 
             "https://a0.muscache.com/im/pictures/miso/Hosting-730313469754035806/original/e948a247-6cb4-4724-89a2-171d28a3b4b0.jpeg?im_w=1440",
             "https://a0.muscache.com/im/pictures/hosting/Hosting-730313469754035806/original/11c5edc1-e276-4b36-8ed9-4aca35edae31.jpeg?im_w=1440",
-            "https://a0.muscache.com/im/pictures/hosting/Hosting-730313469754035806/original/d7f8790f-690f-499d-860f-d13453da9eee.jpeg?im_w=1440", 
+            "https://a0.muscache.com/im/pictures/hosting/Hosting-730313469754035806/original/d7f8790f-690f-499d-860f-d13453da9eee.jpeg?im_w=1440"
         ]
     },
     {
@@ -106,8 +106,7 @@ const Views = [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-49063677/original/d57e6614-6470-4a16-8135-659bf7935405.jpeg?im_w=1440",
             "https://a0.muscache.com/im/pictures/64a82eeb-c159-4268-a5d0-606aa52d762a.jpg?im_w=1200",
             "https://a0.muscache.com/im/pictures/df661948-37d3-4705-bbc4-6475a8364679.jpg?im_w=1440",
-            "https://a0.muscache.com/im/pictures/e556e8ea-49b0-4fc7-bdbb-500ee38ba2a5.jpg?im_w=1440",
-            
+            "https://a0.muscache.com/im/pictures/e556e8ea-49b0-4fc7-bdbb-500ee38ba2a5.jpg?im_w=1440"
 
         ]
     },
@@ -162,10 +161,7 @@ const Views = [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzAwNzMzNA%3D%3D/original/3287b49b-36d0-4ca8-adde-b1f1de996347.jpeg?im_w=1440",
             "https://a0.muscache.com/im/pictures/miso/Hosting-45522616/original/41144314-f5c7-4310-b802-ef83dda6fe24.jpeg?im_w=1200",
             "https://a0.muscache.com/im/pictures/miso/Hosting-45522616/original/6c137361-a199-4ce1-a6cf-a077adddbf73.jpeg?im_w=1440",
-            "https://a0.muscache.com/im/pictures/miso/Hosting-45522616/original/1cbe4375-6242-44d8-bfb5-e337b3205f30.jpeg?im_w=1440",
-            
+            "https://a0.muscache.com/im/pictures/miso/Hosting-45522616/original/1cbe4375-6242-44d8-bfb5-e337b3205f30.jpeg?im_w=1440"
         ]
     }
 ]
-
-export default Views;

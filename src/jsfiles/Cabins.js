@@ -1,4 +1,4 @@
-const Cabins = [
+[
     {
         "place": "Jibhi, India",
         "stay_details": "286 kilometers",
@@ -156,5 +156,3 @@ const Cabins = [
         ]
     }
 ]
-
-export default Cabins;

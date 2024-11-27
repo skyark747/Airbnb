@@ -4,20 +4,34 @@ import Search from '../components/search.jsx';
 import Filter from '../components/Filter.jsx';
 import ItemList from '../components/ItemList.jsx';
 import Listings from '../jsfiles/Context.js';
-import { useState } from "react";
-import Rooms from "../jsfiles/Homepage.js";
+import { useState,createContext, useEffect } from "react";
 import Footer from "../components/Footer.jsx";
-import SearchCity from "../components/SearchCity.jsx";
+import Display from "../globalcontext/View.js";
+
 const App = () => {
-    const [FilterItems,setFilterItems] = useState(Rooms);
+    const [FilterItems, setFilterItems] = useState([]);
+    const [View, setView] = useState('');
+    async function getlisting(name) {
+        const path = `http://localhost:3000/api/listings/${name}`;
+        const res = await fetch(path);
+        const data = await res.json();
+        setFilterItems(data);
+    };
+
+    useEffect(() => {
+        getlisting('Rooms');
+    }, []);
+
     return (
         <>
-            <Listings.Provider value={{FilterItems,setFilterItems}}>
-                <Navbar Navbuttons={Navbuttons} />
-                <Search />
-                <Filter />
-                <ItemList />
-            </Listings.Provider>
+            <Display.Provider value={{View, setView}}>
+                <Listings.Provider value={{FilterItems,setFilterItems}}>
+                    <Navbar Navbuttons={Navbuttons} />
+                    <Search />
+                    <Filter />
+                    <ItemList />
+                </Listings.Provider>
+            </Display.Provider>
             <Footer />
         </>
     )
