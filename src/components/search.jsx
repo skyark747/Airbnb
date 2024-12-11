@@ -38,9 +38,8 @@ const Search = () => {
 
             </section>
             {SearchC && <SearchCity />}
-            {Chechin && <Checkinbox />}
-            {Chechin && <Checkinbox />}
-            {Guest && <Guests />}
+            {Chechin && <Checkinbox className={"absolute bg-white z-50  w-8/12 h-1/2 rounded-3xl shadow-2xl flex justify-center left-64"} />}
+            {Guest && <Guests className={"absolute bg-white right-52 z-50 overflow-y-auto w-1/4 h-2/3 rounded-3xl shadow-2xl justify-self-center"}/>}
         </>
         
     );

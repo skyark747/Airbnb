@@ -1,14 +1,18 @@
-import { useState } from "react";
 import StaticDatePickerLandscape from "./InputDate";
 
 import "react-datepicker/dist/react-datepicker.css";
-const Checkinbox = () => {
+const Checkinbox = ({className,SetCheckin}) => {
     return (
-        <div className="absolute bg-white left-80 z-50  w-8/12 h-1/2 rounded-3xl shadow-2xl flex justify-center" >
-                <StaticDatePickerLandscape />
+        <div className={`${className}`} >
             
                 <StaticDatePickerLandscape />
             
+            <StaticDatePickerLandscape />
+            
+            <button class="text-gray-500 hover:text-gray-700 fixed" aria-label="Close" onClick={() => SetCheckin(false)}>
+                &times;
+            </button>
+
         </div>
     );
 };
