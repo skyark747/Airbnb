@@ -1,6 +1,11 @@
 
     [
         {
+            "id": 1,
+            "name": "Genevieve",
+            "bedrooms": 3,
+            "beds": 2,
+            "bathrooms": 1,
             "place": "London, UK",
             "rating": 4.89,
             "price_per_night": 72,
@@ -16,6 +21,11 @@
             ]
         },
         {
+            "id": 2,
+            "name": "John",
+            "bedrooms": 2,
+            "beds": 1,
+            "bathrooms": 1,
             "place": "New York, USA",
             "rating": 4.75,
             "price_per_night": 85,
@@ -31,6 +41,11 @@
             ]
         },
         {
+            "id": 3,
+            "name": "Sophia",
+            "bedrooms": 4,
+            "beds": 3,
+            "bathrooms": 2,
             "place": "Paris, France",
             "rating": 4.95,
             "price_per_night": 90,
@@ -45,6 +60,11 @@
             ]
         },
         {
+            "id": 4,
+            "name": "Kenji",
+            "bedrooms": 3,
+            "beds": 2,
+            "bathrooms": 1,
             "place": "Tokyo, Japan",
             "rating": 4.9,
             "price_per_night": 100,
@@ -59,9 +79,14 @@
             ]
         },
         {
+            "id": 5,
             "place": "Sydney, Australia",
             "rating": 4.85,
             "price_per_night": 75,
+            "name": "Olivia",
+            "bedrooms": 2,
+            "beds": 2,
+            "bathrooms": 1,
             "stay_details": "Stay with Olivia • Yoga instructor",
             "date": "Jan 30–4",
             "img_url": ["https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -73,10 +98,15 @@
             ]
         },
         {
+            "id": 6,
             "place": "Barcelona, Spain",
             "rating": 4.8,
             "price_per_night": 78,
             "stay_details": "Stay with Carlos • Architect",
+            "name": "Carlos",
+            "bedrooms": 2,
+            "beds": 2,
+            "bathrooms": 1,
             "date": "Feb 3–8",
             "img_url": ["https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -87,10 +117,15 @@
             ]
         },
         {
+            "id": 7,
             "place": "Rome, Italy",
             "rating": 4.7,
             "price_per_night": 82,
             "stay_details": "Stay with Isabella • Historian",
+            "name": "Isabella",
+            "bedrooms": 2,
+            "beds": 2,
+            "bathrooms": 1,
             "date": "Feb 10–15",
             "img_url": ["https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -101,10 +136,15 @@
             ]
         },
         {
+            "id": 8,
             "place": "Berlin, Germany",
             "rating": 4.9,
             "price_per_night": 70,
             "stay_details": "Stay with Hans • Musician",
+            "name": "Hans",
+            "bedrooms": 3,
+            "beds": 3,
+            "bathrooms": 1,
             "date": "Feb 17–22",
             "img_url": ["https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -115,10 +155,15 @@
             ]
         },
         {
+            "id": 9,
             "place": "Amsterdam, Netherlands",
             "rating": 4.95,
             "price_per_night": 88,
             "stay_details": "Stay with Emma • Writer",
+            "name": "Emma",
+            "bedrooms": 2,
+            "beds": 2,
+            "bathrooms": 1,
             "date": "Feb 24–29",
             "img_url": ["https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -129,11 +174,16 @@
             ]
         },
         {
+            "id": 10,
             "place": "Cape Town, South Africa",
             "rating": 4.85,
             "price_per_night": 65,
             "stay_details": "Stay with Zola • Photographer",
             "date": "Feb 30–4",
+            "name": "Zola",
+            "bedrooms": 2,
+            "beds": 2,
+            "bathrooms": 1,
             "img_url": ["https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "https://images.pexels.com/photos/707581/pexels-photo-707581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -143,10 +193,15 @@
             ]
         },
         {
+            "id": 11,
             "place": "Toronto, Canada",
             "rating": 4.8,
             "price_per_night": 95,
             "stay_details": "Stay with Sarah • Film director",
+            "name": "Sarah",
+            "bedrooms": 2,
+            "beds": 2,
+            "bathrooms": 1,
             "date": "Mar 7–12",
             "img_url": ["https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -157,10 +212,15 @@
             ]
         },
         {
+            "id": 12,
             "place": "Dubai, UAE",
             "rating": 4.9,
             "price_per_night": 120,
             "stay_details": "Stay with Ahmed • Entrepreneur",
+            "name": "Ahmed",
+            "bedrooms": 2,
+            "beds": 2,
+            "bathrooms": 1,
             "date": "Oct 10–15",
             "img_url": ["https://images.pexels.com/photos/90319/pexels-photo-90319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 "https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

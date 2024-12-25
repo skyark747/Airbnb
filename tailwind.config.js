@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         customgray: 'rgb(245, 241, 241)',  
+        custompink: 'rgb(255, 0, 85)',
         
       },
       borderWidth: {

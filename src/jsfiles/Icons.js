@@ -1,6 +1,11 @@
 [
     {
+        "id": 47851,
+        "beds": 2,
+        "bedrooms": 4,
+        "bathrooms": 2,
         "place": "Haunt the Beetlejuice house",
+        "name":"Beetlejuice",
         "stay_details": "Hosted by Deelia Deetz",
         "price_per_night": 0,
         "img_url": [
@@ -12,8 +17,13 @@
         ]
     },
     {
+        "id": 47852,
+        "beds": 2,
+        "bedrooms": 3,
+        "bathrooms": 2,
         "place": "Stay in Prince's Purple Rain house",
         "stay_details": "Hosted by Wendy and Lisa",
+        "name":"Wendy and Lisa",
         "price_per_night": 0,
         "img_url": [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/a766e0e9-1e6f-4b88-b8d5-ce12375c6de8.png?im_w=1200",
@@ -23,8 +33,13 @@
         ]
     },
     {
+        "id": 47853,
+        "beds": 2,
+        "bedrooms": 4,
+        "bathrooms": 2,
         "place": "Train at the X-Mansion",
         "stay_details": "Hosted by Jubilee",
+        "name":"Jubilee",
         "price_per_night": 28,
         "img_url": [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjMyMzc5Mzc2MTc3OTEzMg%3D%3D/original/8a39953f-f158-4cc2-a112-aa4079e0fca8.jpeg?im_w=1200",
@@ -34,8 +49,13 @@
         ]
     },
     {
+        "id": 47854,
+        "beds": 2,
+        "bedrooms": 4,
+        "bathrooms": 2,
         "place": "Live like Bollywood star Janhvi Kapoor",
         "stay_details": "Hosted by Janhvi Kapoor",
+        "name":"Janhvi Kapoor",
         "price_per_night": 30,
         "img_url": [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NjI3OTI1MjIxNDQyOA%3D%3D/original/bc989f2d-eca8-4bcf-a9b0-b70b8e685a64.jpeg?im_w=1200&im_q=highq",
@@ -46,8 +66,13 @@
         ]
     },
     {
+        "id": 47855,
+        "beds": 2,
+        "bedrooms": 2,
+        "bathrooms": 2,
         "place": "Open the Olympic Games at Musée d’Orsay",
         "stay_details": "Hosted by Mathieu Lehanneur",
+        "name":"Mathieu Lehanneur",
         "price_per_night": 10,
         "img_url": [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE4NzE3Nzg1NDA2MjM5NzY2NQ%3D%3D/original/6989d581-3f67-4cd9-8cb6-5f5c226aedc6.png?im_w=1200&im_q=highq",
@@ -58,8 +83,13 @@
         ]
     },
     {
+        "id": 47856,
+        "beds": 2,
+        "bedrooms": 3,
+        "bathrooms": 2,
         "place": "Make Memories with Inside Out 2",
         "stay_details": "Hosted by Joy",
+        "name":"Joy",
         "price_per_night": 20,
         "img_url": [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/ced15ffe-0ab5-48cf-a189-dbdeaaf04387.jpeg?im_w=1200&im_q=highq",
@@ -69,8 +99,13 @@
         ]
     },
     {
+        "id":47857,
         "place": "Stay at the Eiffel Tower",
         "stay_details": "Hosted by Pierre Durand",
+        "name": "Pierre Durand",
+        "beds": 2,
+        "bedrooms": 3,
+        "bathrooms": 2,
         "price_per_night": 30,
         "img_url": [
             "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/04966b4d-fe31-4bc0-b1ca-2df033d1527a.jpeg?im_w=1200&im_q=highq",
@@ -80,8 +115,13 @@
         ]
     },
     {
+        "id": 47858,
+        "beds": 2,
+        "bedrooms": 1,
+        "bathrooms": 1,
         "place": "Shrek's Swamp",
         "stay_details": "Hosted by Shrek",
+        "name":"Shrek",
         "price_per_night": 50,
         "img_url": [
             "https://a0.muscache.com/im/pictures/miso/Hosting-881808599061267756/original/b16970cf-1d55-4edd-bb1f-e1735d0a228e.jpeg?im_w=1200&im_q=highq",
@@ -91,8 +131,13 @@
         ]
     },
     {
+        "id": 47859,
+        "beds": 2,
+        "bedrooms": 1,
+        "bathrooms": 1,
         "place": "Home Alone Holiday",
         "stay_details": "Hosted by Buzz",
+        "name":"Buzz",
         "price_per_night": 48,
         "img_url": [
             "https://a0.muscache.com/im/pictures/miso/Hosting-53274539/original/365299e3-f926-47ee-bcbf-606d6a0370b9.jpeg?im_w=1200&im_q=highq",
@@ -102,8 +147,13 @@
         ]
     },
     {
+        "id": 47860,
+        "beds": 2,
+        "bedrooms": 2,
+        "bathrooms": 2,
         "place": "Luxury Retreat at Mount Fuji",
         "stay_details": "Hosted by Hana Takahashi",
+        "name":"Hana Takahashi",
         "price_per_night": 22,
         "img_url": [
             "https://a0.muscache.com/im/pictures/miso/Hosting-782615921189136934/original/c67f78f1-5807-449a-9a88-753b7fa62d6a.jpeg?im_w=1200&im_q=highq",
@@ -113,8 +163,13 @@
         ]
     },
     {
+        "id": 47861,
+        "beds": 10,
+        "bedrooms": 10,
+        "bathrooms": 3,
         "place": "Island Getaway with Aquaman",
         "stay_details": "Hosted by Arthur Curry",
+        "name":"Arthur Curry",
         "price_per_night": 12,
         "img_url": [
             "https://a0.muscache.com/im/pictures/miso/Hosting-694055224756906854/original/76f85a0c-b3e2-4f1d-9aa9-d7838f2393c6.jpeg?im_w=1200&im_q=highq",
@@ -124,8 +179,13 @@
         ]
     },
     {
+        "id": 47862,
+        "beds": 2,
+        "bedrooms": 4,
+        "bathrooms": 2,
         "place": "Party at Barbie's",
         "stay_details": "Hosted by Barbie",
+        "name":"Margot Robbie",
         "price_per_night": 45,
         "img_url": [
             "https://a0.muscache.com/im/pictures/miso/Hosting-857387972692815761/original/d106e0ef-f825-4ff8-baf7-86256a54fbd5.jpeg?im_w=1200&im_q=highq",

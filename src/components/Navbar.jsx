@@ -25,7 +25,7 @@ const Navbar = ({ Navbuttons }) => {
 
                 </div>
             </div>
-            {showLogin && <Login setShowLogin={setShowLogin} />}
+            {showLogin && <Login setShowLogin={setShowLogin} title={"Log In"} value={1}/>}
         </>
 
     )

@@ -9,6 +9,7 @@ import { FaTicketAlt, FaFilm } from 'react-icons/fa'; // Ticket Icons
 import { MdPlace } from 'react-icons/md'; // Place Icons
 import { GiCastle, GiHouse, GiMountainCave, GiAlienSkull, GiTowerBridge, GiAlienBug } from 'react-icons/gi'; // Game Icons
 import Listings from "../jsfiles/Context";
+import Button from "../smallcomponents/AddButton";
 
 
 const Filter = () => {
@@ -78,6 +79,7 @@ const Filter = () => {
             console.error(err);
         }
     };
+
     function handleClick(item) {
         switch (item) {
             case "Rooms":
@@ -146,9 +148,14 @@ const Filter = () => {
                     <button onClick={() => slider.current.slickNext()} class='w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out' id="b"><i class='bx bx-chevron-right'></i></button>
 
                 </div>
-                <button className="w-24 h-12 mt-3 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center" ><FiFilter />Filters</button>
+                <div className="space-x-4 flex ">
+                    <div className="mt-3">
+                        <Button />
+                    </div>
+                    <button className="w-24 h-12 mt-3 ml-24 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center" ><FiFilter />Filters</button>
+                    <button className="w-32 h-12 mt-3 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center" >View Bookings</button>
 
-                <button className="w-52 h-12 mt-3 rounded-xl border-1 border-gray-300 text-sm ml-4 hover:bg-customgray hover:border-black" >Display total before taxes</button>
+                </div>
             </div>
         </>
     );

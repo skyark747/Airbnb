@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
 import Displayname from "../smallcomponents/Displayname";
-import Checkinbox from "../components/Checkinbox";
 import Guests from "../components/Guests";
 import { useState } from "react";
 import BabyFooter from "../components/BabyFooter";
+import DateSelector from "../smallcomponents/DatePick";
 const Booking = () => {
     const [Checkin, SetCheckin] = useState(false);
     const [guests, SetGuest] = useState(false);
@@ -50,7 +50,7 @@ const Booking = () => {
                 {Checkin && (
                     <div className="absolute inset-0 flex items-center justify-center z-50 h-full w-full mt-10">
                         
-                        <Checkinbox className="bg-white overflow-y-auto w-2/3 h-full rounded-3xl shadow-2xl p-4 flex" SetCheckin={SetCheckin}/>
+                        <DateSelector  SetCheck={SetCheckin}/>
                     </div>
                 )}
                 {guests && (

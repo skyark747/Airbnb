@@ -1,7 +1,12 @@
 [
     {
+        "id": 13,
+        
         "place": "Meleodganj/Dharmsala, India",
         "stay_details": "Hosted by Dev Raj",
+        "name": "Dev",
+        "bedrooms": 4,
+        "bathrooms": 2,
         "rating": 4.84,
         "price_per_night": 43,
         "date": "Nov 2–7",
@@ -14,8 +19,13 @@
         ]
     },
     {
+        "id": 14,
+        
         "place": "Lahore, Pakistan",
         "stay_details": "Hosted by Aliya",
+        "name": "Aliya",
+        "bedrooms": 3,
+        "bathrooms": 2,
         "rating": 4.83,
         "price_per_night": 32,
         "date": "Nov 7–12",
@@ -28,8 +38,12 @@
         ]
     },
     {
+        "id":15,
         "place": "Chowari, India",
         "stay_details": "Hosted by Mridul",
+        "name": "Mridul",
+        "bedrooms": 4,
+        "bathrooms": 2,
         "rating": 4.94,
         "price_per_night": 48,
         "date": "Nov 1–6",
@@ -42,8 +56,12 @@
         ]
     },
     {
+        "id":16,
         "place": "Lahore, Pakistan",
-        "stay_details": "Hosted by Aliya",
+        "stay_details": "Hosted by Ahmed",
+        "name": "Ahmed",
+        "bedrooms": 3,
+        "bathrooms": 1,
         "rating": 5.0,
         "price_per_night": 32,
         "date": "Nov 13–18",
@@ -56,8 +74,12 @@
         ]
     },
     {
+        "id":17,
         "place": "Manali, India",
         "stay_details": "Hosted by Rahul",
+        "name": "Rahul",
+        "bedrooms": 4,
+        "bathrooms": 2,
         "rating": 4.87,
         "price_per_night": 35,
         "date": "Nov 15–20",
@@ -70,8 +92,12 @@
         ]
     },
     {
+        "id":18,
         "place": "Islamabad, Pakistan",
         "stay_details": "Hosted by Zainab",
+        "name": "Zainab",
+        "bedrooms": 3,
+        "bathrooms": 2,
         "rating": 4.92,
         "price_per_night": 38,
         "date": "Nov 18–23",
@@ -84,8 +110,12 @@
         ]
     },
     {
+        "id":19,
         "place": "Shimla, India",
         "stay_details": "Hosted by Priya",
+        "name": "Priya",
+        "bedrooms": 4,
+        "bathrooms": 2,
         "rating": 4.89,
         "price_per_night": 42,
         "date": "Nov 20–25",
@@ -98,8 +128,12 @@
         ]
     },
     {
+        "id":20,
         "place": "Karachi, Pakistan",
         "stay_details": "Hosted by Imran",
+        "name": "Imran",
+        "bedrooms": 3,
+        "bathrooms": 2,
         "rating": 4.85,
         "price_per_night": 25,
         "date": "Nov 22–27",
@@ -126,8 +160,12 @@
         ]
     },
     {
+        "id":21,
         "place": "Multan, Pakistan",
         "stay_details": "Hosted by Hassan",
+        "name": "Hassan",
+        "bedrooms": 3,
+        "bathrooms": 2,
         "rating": 4.88,
         "price_per_night": 22,
         "date": "Nov 28–Dec 3",
@@ -140,8 +178,12 @@
         ]
     },
     {
+        "id":22,
         "place": "Dharamshala, India",
         "stay_details": "Hosted by Vikram",
+        "name": "Vikram",
+        "bedrooms": 3,
+        "bathrooms": 2,
         "rating": 4.86,
         "price_per_night": 41,
         "date": "Dec 1–6",
@@ -154,8 +196,12 @@
         ]
     },
     {
+        "id":23,
         "place": "Faisalabad, Pakistan",
         "stay_details": "Hosted by Fatima",
+        "name": "Fatima",
+        "bedrooms": 3,
+        "bathrooms": 2,
         "rating": 4.82,
         "price_per_night":28,
         "date": "Dec 4–9",

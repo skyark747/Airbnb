@@ -1,12 +1,21 @@
+import { useEffect, useState } from "react";
 
-const Login = ({setShowLogin}) => {
+const Login = ({ setShowLogin, title, value }) => {
+    const [register, setregister] = useState(false);
+    
     return (
         <>
          <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50" >
         <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-6">
             
-            <div class="flex justify-between items-center">
-                <h2 class="text-lg font-semibold">Log In or Sign Up</h2>
+                    <div class="flex justify-between items-center">
+                        {
+                            register? (
+                                <span >Sign up</span>
+                            ) : (
+                                <span >Log in</span>
+                            )
+                        }
                 <button class="text-gray-500 hover:text-gray-700" aria-label="Close" onClick={() => setShowLogin(false)}>
                     &times;
                 </button>
@@ -41,8 +50,18 @@ const Login = ({setShowLogin}) => {
                 >
                     Continue
                 </button>
-            </form>
-
+                    </form>
+                    {
+                        register ?
+                            <div className="h-2">
+                                <p class="text-sm text-gray-500">already have an account? <a href="#" className="text-pink-600 hover:underline" onClick={() => setregister(false)}>Log In</a></p>
+                            </div>
+                            : 
+                            <div className="h-2">
+                                <p class="text-sm text-gray-500">Don't have an account? <a href="#" className="text-pink-600 hover:underline" onClick={() => setregister(true)}>Sign Up</a></p>
+                            </div>
+                    }
+            
             <div class="flex items-center space-x-2">
                 <hr class="flex-1 border-gray-300" />
                 <span class="text-sm text-gray-500">or</span>
@@ -65,7 +84,7 @@ const Login = ({setShowLogin}) => {
                 </button>
             </div>
         </div>
-        </div >
+            </div >
     </>
 
     )
