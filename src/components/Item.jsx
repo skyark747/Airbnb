@@ -4,19 +4,36 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import Display from "../globalcontext/View";
-import Button from "../smallcomponents/AddButton";
+import Admin from "../globalcontext/AdminContext";
 const Item = ({ img_src, place, rating, price, stay_details, date, id }) => {
     const { View, setView } = useContext(Display);
+    const { IsAdmin, setIsAdmin } = useContext(Admin);
     async function getlisting(id) {
         const path = `http://localhost:3000/api/listings/details/${id}`;
         const res = await fetch(path);
         const data = await res.json();
         setView(data);
     };
+    async function dellisting(id) {
+        const token=localStorage.getItem("Token");
+        const path = `http://localhost:3000/api/admin/listings/${id}`;
+        const res = await fetch(path, {
+            method: "DELETE", 
+            headers: {
+                "Content-Type": "application/json", 
+                "Authorization": `Bearer ${token}`, 
+            },
+        });
+        const data = await res.json();
+        alert(data.msg);
+    };
     const navigate = useNavigate();
     const handle_Click = (id) => {
         getlisting(id);
         navigate('/listings');
+    }
+    const handle_Click_2 = (id) => {
+        dellisting(id);
     }
     const slider = useRef(null);
     var settings = {
@@ -41,7 +58,7 @@ const Item = ({ img_src, place, rating, price, stay_details, date, id }) => {
         setactive(!active);
     }
     return (
-        <div  className="h-full w-11/12 object-contain pb-10 mt-2 flex " id="image-slider">
+        <div className="h-full w-11/12 object-contain pb-10 mt-2" id="image-slider">
             <div className="w-full h-full">
                 <div className="w-full h-72">
                     <Slider {...settings} ref={slider}>
@@ -63,22 +80,25 @@ const Item = ({ img_src, place, rating, price, stay_details, date, id }) => {
                     </Slider>
 
                 </div>
-                <a href="#" className="flex" >
-                    <a href="#" className="w-full h-24 " onClick={() => handle_Click(id)}>
-                        <div className="flex justify-between mt-2">
-                            <h2 className="font-semibold">{place}</h2>
-                            <h2>{rating}</h2>
+                <a href="#" className="w-full h-24 " onClick={() => handle_Click(id)}>
+                    <div className="flex justify-between mt-2">
+                        <h2 className="font-semibold">{place}</h2>
+                        <h2 >{rating}</h2>
+                    </div>
+                    <div className="flex justify-between">
+                        <div>
+                            <p className="text-gray-500">{stay_details}</p>
+                            <p className="text-gray-500">{date}</p>
+                            <p className="font-semibold">${price} night</p>
                         </div>
-                        <p className="text-gray-500">{stay_details}</p>
-                        <p className="text-gray-500">{date}</p>
-                        <p className="font-semibold">${price} night</p>
-                    </a>
-                
-                    
+                        <div className="mt-2 h-8">
+
+                            {IsAdmin && <button className="w-24 h-8 rounded-xl border-1 flex border-gray-300 hover:bg-custompink hover:border-black justify-around items-center" onClick={() => handle_Click_2(id)}>Delete</button>}
+                        </div>
+                    </div>
                 </a>
-                <div>
-                    <button className="w-24 h-8 rounded-xl border-1 flex border-gray-300 hover:bg-custompink hover:border-black justify-around items-center" >Delete</button>
-                </div>
+                
+
             </div>
         </div>
     );

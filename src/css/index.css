@@ -109,11 +109,7 @@
     box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.2);
 }
 
-#slider:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-color: rgba(0, 0, 0, 0.2);
-}
+
 #slide-image{
     display: none;
     transition: 0.3s ease-in-out;
@@ -121,5 +117,9 @@
 #image-slider:hover #slide-image{
     transition: 0.3s ease-in-out;
     display: block;
+}
+
+#check-hover:hover{
+    border-bottom: 0.15rem solid rgb(163, 158, 158);
 }
 

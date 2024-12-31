@@ -12,7 +12,7 @@ const SearchCityPart = ({ name }) => {
 
     }
     return (
-        <div className="w-full h-16 bg-white flex justify-center items-center hover:bg-gray-100">
+        <div className="w-full h-16 bg-white flex justify-center items-center hover:bg-pink-100">
             <a href="#" className="w-full h-full flex justify-center items-center font-semibold" onClick={(e) => change(e.currentTarget.textContent)}>{name}</a> 
         </div>
     );

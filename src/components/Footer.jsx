@@ -3,6 +3,7 @@ import Hyperlinks from "./Footer-hyperlinks";
 import Footer_detail from "./Footer_details";
 import BabyFooter from "./BabyFooter";
 const Footer = () => {
+    
     return (
         <div className="w-full h-auto bg-gray-100">
             <div className="w-11/12 h-44 bg-gray-100 ml-16 border-b-2 justify-center items-center flex">

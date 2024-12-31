@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { BiPlus , BiMinus} from "react-icons/bi";
 
-const AddGuests = ({ name,detail }) => {
+const AddGuests = ({ name, detail, SetNumberofGuests, numberOfGuests }) => {
     const [value, SetValue] = useState(1);
     function Set({ value }) {
         if (value == 0) {
             SetValue(0);
         }
         else {
-            SetValue(value -1);
+            SetValue(value - 1);
+            if (numberOfGuests != 0) {
+                SetNumberofGuests(numberOfGuests - 1);
+            }
         }
     }
     return (
@@ -21,7 +24,7 @@ const AddGuests = ({ name,detail }) => {
                 <>
                     <button class="w-8 h-8 rounded-full bg-white border-2 hover:border-black flex justify-center items-center" onClick={() => Set({ value })}><BiMinus /></button>
                 <p >{value}</p>
-                    <button class="w-8 h-8 rounded-full bg-white border-2 hover:border-black flex justify-center items-center" onClick={() => SetValue(value + 1)}><BiPlus /></button>
+                    <button class="w-8 h-8 rounded-full bg-white border-2 hover:border-black flex justify-center items-center" onClick={() => { SetValue(value + 1); SetNumberofGuests(numberOfGuests + 1)}}><BiPlus /></button>
                 </>
             </div>
         </div>

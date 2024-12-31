@@ -1,18 +1,24 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import Item from "./Item";
 import Listings from "../jsfiles/Context";
 import Loader from "../smallcomponents/Loader";
 
 const ItemList = () => {
-    const { FilterItems, setFilterItems } = useContext(Listings);
-    if(!FilterItems){
-        return <Loader />
+    const { FilterItems } = useContext(Listings);
+
+    if (!FilterItems) {
+        return <Loader />;
     }
+
     return (
-        <div href="#" class=" w-full h-auto" id="items">
-            <div class="w-95 h-auto gap-1 grid grid-cols-4 ml-16">
+        <div className="w-full h-auto" id="items">
+            <div
+                className="w-95 h-auto gap-1 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ml-4 md:ml-8 lg:ml-16
+                "
+            >
                 {FilterItems.map((item, index) => (
-                    <Item key={index}
+                    <Item
+                        key={index}
                         img_src={item.img_url}
                         place={item.place}
                         rating={item.rating}
@@ -25,6 +31,6 @@ const ItemList = () => {
             </div>
         </div>
     );
-}
+};
 
 export default ItemList;

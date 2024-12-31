@@ -1,7 +1,8 @@
 import Login from "./Login";
-import { useState, useEffect } from "react";
+import LogIn from "../globalcontext/LoginContext";
+import { useState, useEffect,useContext } from "react";
 const Navbar = ({ Navbuttons }) => {
-    const [showLogin, setShowLogin] = useState(false);
+    const { showLogin, setShowLogin } = useContext(LogIn);
     return (
         <>
             <div class="bg-white w-full h-20 flex justify-between ">
@@ -25,7 +26,7 @@ const Navbar = ({ Navbuttons }) => {
 
                 </div>
             </div>
-            {showLogin && <Login setShowLogin={setShowLogin} title={"Log In"} value={1}/>}
+            {showLogin && <Login setShowLogin={setShowLogin} />}
         </>
 
     )
