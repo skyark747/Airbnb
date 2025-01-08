@@ -5,10 +5,10 @@ const Navbar = ({ Navbuttons }) => {
     const { showLogin, setShowLogin } = useContext(LogIn);
     return (
         <>
-            <div class="bg-white w-full h-20 flex justify-between ">
-                <div class="flex items-center w-48 h-full ml-10">
-                    <img src="/airbnb-logo-icon-png-svg.png" alt="airbnb logo" class="w-8 h-8 ml-10" ></img>
-                    <span class="flex text-2xl font-bold" id="logo">airbnb</span>
+            <div className="bg-white w-full h-20 flex justify-between ">
+                <div className="lg:flex lg:items-center lg:w-48 h-full lg:ml-10">
+                    <img src="/airbnb-logo-icon-png-svg.png" alt="airbnb logo" className="lg:w-8 lg:h-8 lg:ml-10 md:w-6 md:h-6" ></img>
+                    <span className="flex lg:text-2xl font-bold md:text-xl" id="logo">airbnb</span>
                 </div>
                 <div id="navbuttons" class="w-1/3 h-full justify-center items-center">
                     {Navbuttons && <Navbuttons />}
