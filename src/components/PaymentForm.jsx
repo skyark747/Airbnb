@@ -50,14 +50,7 @@ const Form = ({checkindate,checkoutdate,numberOfGuests}) => {
                   <p>**** **** **** 4243</p>
                 </div>
                 <hr />
-                <div className="promo">
-                  <span>HAVE A PROMO CODE?</span>
-                  <form className="form">
-                    <input className="input_field" placeholder="Enter a Promo Code" type="text" />
-                    <button>Apply</button>
-                  </form>
-                </div>
-                <hr />
+                
                 <div className="payments">
                   <span>PAYMENT</span>
                   <div className="details">
@@ -98,7 +91,7 @@ const Form = ({checkindate,checkoutdate,numberOfGuests}) => {
   }
 
   .card {
-    width: 400px;
+    width: 17rem;
     background: #F4E2DE;
     box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
   }

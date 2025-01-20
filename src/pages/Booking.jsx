@@ -2,20 +2,19 @@ import Navbar from "../components/Navbar";
 import Displayname from "../smallcomponents/Displayname";
 import Guests from "../components/Guests";
 import { useState, useContext, useEffect } from "react";
-import BabyFooter from "../components/BabyFooter";
 import DateSelector from "../smallcomponents/DatePick";
 import Switch from "../smallcomponents/Switch";
 import Form from "../components/PaymentForm";
 import Contexts from '../globalcontext/Bookingdetails';
 const { StayDateIn, StayDateOut, StayGuests } = Contexts;
-import calculateDays from "../jsfiles/CalculateDays";
+import Footer from "../components/Footer";
 
 const Booking = () => {
     const [Checkin, SetCheckin] = useState(false);
     const [Checkout, SetCheckout] = useState(false);
     const [guests, SetGuest] = useState(false);
     const [toggle, settoggle] = useState(false);
-    
+
     const { checkindate, SetCheckinDate } = useContext(StayDateIn);
     const { checkoutdate, SetCheckoutDate } = useContext(StayDateOut);
     const { numberOfGuests, SetNumberOfGuests } = useContext(StayGuests);
@@ -24,21 +23,19 @@ const Booking = () => {
         <>
             <Navbar />
 
-            <div className="relative w-full h-full flex border-t-2">
+            <div className="relative w-full h-full flex border-t-2 flex-col md:flex-row">
 
-                <div className="w-3/4 h-full">
+                <div className="md:w-4/6 w-full h-full flex flex-col justify-center items-center ">
 
                     <div className="w-full h-28 flex justify-center">
-                        <Displayname name={"Request to Book"} className={"w-11/12 h-full flex items-end ml-60 font-semibold "} />
+                        <Displayname name={"Request to Book"} className={"flex items-end  font-semibold "} />
                     </div>
-                    <div className="flex items-center justify-center space-x-2 text-lg border border-gray-300 rounded-lg h-28 mt-10 w-1/2 ml-60">
-                        <div className="w-full h-full ml-10 flex flex-col justify-center">
+                    <div className="flex flex-col items-center justify-center space-x-2 text-lg border border-gray-300 rounded-lg h-28 mt-10 md:w-1/2 w-11/12 ml-4">
                             <p className="font-semibold">Good Price</p>
                             <p className="text-gray-700">Your dates are $6 less than the avg. nightly rate over the last 3 months.</p>
-                        </div>
                     </div>
 
-                    <div className="space-x-2 text-lg h-60 mt-4 w-1/2 ml-60 border-b-2 flex items-center justify-center flex-col">
+                    <div className="space-x-2 text-lg h-60 mt-4 md:w-1/2 w-11/12 ml-4 border-b-2 flex items-center justify-center flex-col">
                         <div className="h-full w-full space-y-4">
                             <p className="font-semibold text-2xl">Your Trip</p>
                             <div className="w-full h-full mt-10 space-y-2 flex flex-col">
@@ -69,16 +66,14 @@ const Booking = () => {
 
                     </div>
 
-                    <div className="bg-gray-100 w-full h-16 absolute flex justify-center items-center mt-10">
-                        <BabyFooter />
-                    </div>
-
                 </div>
-                <div className="w-1/3  mt-10">
+                <div className="mt-10 ml-2 md:ml-0">
                     {
-                         <Form  checkindate={checkindate} checkoutdate={checkoutdate} numberOfGuests={numberOfGuests}/>
+                        <Form checkindate={checkindate} checkoutdate={checkoutdate} numberOfGuests={numberOfGuests} />
                     }
                 </div>
+                
+            
                 {Checkin && (
                     <div className="absolute inset-0 flex items-center justify-center z-50 h-full w-full mt-10 space-x-4">
 
@@ -96,6 +91,9 @@ const Booking = () => {
                             {numberOfGuests} SetNumberOfGuests={SetNumberOfGuests} />
                     </div>
                 )}
+            </div>
+            <div className="mt-10">
+                    <Footer />
             </div>
         </>
     )

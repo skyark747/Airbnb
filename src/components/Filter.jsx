@@ -21,13 +21,22 @@ const Filter = () => {
     const { Filteritems, setFilterItems } = useContext(Listings);
     const [listing, setlisting] = useState(false);
     const { IsAdmin, setIsAdmin } = useContext(Admin);
+    const [slidestoshow,setslidestoshow]=useState(6);
     const navigate = useNavigate();
-
+    useEffect(() => {
+        const handleResize = () => {
+          setslidestoshow(window.innerWidth < 640 ? 3 : 6);
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial call
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+    
     var settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 6,
+        slidesToShow: slidestoshow,
         slidesToScroll: 6,
         arrows: false,
     };
@@ -137,19 +146,19 @@ const Filter = () => {
 
     return (
         <>
-            <div className="filter" class='flex w-full h-24'>
-                <div class='w-3/4 h-16 ml-2 flex items-center mt-3 justify-center content-center'>
-                    <button onClick={() => slider.current.slickPrev()} class='w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out' id="b"><i class='bx bx-chevron-left'></i></button>
-                    <div class="flex w-5/6 h-full justify-center items-center content-center" >
+            <div className="filter" class='flex w-full lg:h-24 lg:flex-row flex-col h-40'>
+                <div class='lg:w-3/4 w-full h-16 sm:ml-2 flex items-center mt-3 justify-center content-center '>
+                    <button onClick={() => slider.current.slickPrev()} class='w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out sm:block hidden' id="b"><i class='bx bx-chevron-left'></i></button>
+                    <div class="flex sm:w-5/6 w-full h-full justify-center items-center content-center " >
                         <div className="w-11/12 h-full">
-                            <Slider ref={slider} {...settings}>
+                            <Slider ref={slider} {...settings} className="custom-slider">
                                 {
                                     Items.map((item, index) => (
 
                                         <a href="#" key={index} onClick={(e) => Setvalue(e.currentTarget.textContent)} className="w-12 h-16 justify-center items-center align-center " id="slider">
                                             
-                                            <div href="#" className="flex flex-col justify-center items-center w-3/4 h-full " id="check-hover">{item.icon}
-                                                    <p className="font-semibold text-sm text-gray-500 mt-2">{item.name}</p>
+                                            <div href="#" className="flex flex-col justify-center items-center w-3/4 h-full" id="check-hover">{item.icon}
+                                                    <p className="font-semibold text-sm text-gray-500 mt-2 ">{item.name}</p>
                                             </div>
                                             
                                         </a>
@@ -160,15 +169,15 @@ const Filter = () => {
                         </div>
 
                     </div>
-                    <button onClick={() => slider.current.slickNext()} class='w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out' id="b"><i class='bx bx-chevron-right'></i></button>
+                    <button onClick={() => slider.current.slickNext()} class=' w-8 h-8 rounded-full border-black hover:shadow-2xl hover:scale-105 transform transition duration-150 ease-in-out sm:block hidden' id="b"><i class='bx bx-chevron-right'></i></button>
 
                 </div>
-                <div className="space-x-4 flex ">
-                    <div className="mt-3" onClick={() => setlisting(!listing)}>
-                        {IsAdmin && <Button />}
-                    </div>
-                    <button className="w-24 h-12 mt-3 ml-24 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center" ><FiFilter />Filters</button>
-                    <button className="w-32 h-12 mt-3 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center" onClick={viewbookings} >View Bookings</button>
+                <div className="space-x-4 flex justify-center ">
+                    {IsAdmin && <div className="mt-3 " onClick={() => setlisting(!listing)}>
+                        <Button />
+                    </div>}
+                    <button className="w-24 h-12 mt-3 md:ml-24 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center " ><FiFilter />Filters</button>
+                    <button className="w-32 h-12 mt-3 rounded-xl border-1 flex border-gray-300 hover:bg-customgray hover:border-black justify-around items-center " onClick={viewbookings} >View Bookings</button>
 
                 </div>
             </div>

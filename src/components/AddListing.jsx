@@ -50,10 +50,10 @@ const Add_Listing = ({ setlisting }) => {
 
     return (
         <>
-            <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50" >
+            <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50 " >
                 <div className="bg-white items-center justify-center rounded-lg shadow-lg w-8/12">
 
-                    <div class="p-6 space-y-6 flex ">
+                    <div class="p-6 space-y-6 flex overflow-x-auto">
 
                         <form class="w-3/4 flex space-x-32">
 
@@ -152,7 +152,7 @@ const Add_Listing = ({ setlisting }) => {
 
                                         onChange={(e) => setrating(e.target.value)} />
                                 </div>
-                                <div className="gap-1 grid grid-cols-3 mt-2">
+                                <div className="md:gap-1 gap-x-20 gap-y-6 grid grid-cols-3 mt-2">
                                     {
                                         propertyArr.map((item, index) => (
                                             <Button text={item} setproperty={setproperty} />
@@ -163,7 +163,7 @@ const Add_Listing = ({ setlisting }) => {
                             </div>
 
                         </form>
-                        <div >
+                        <div className="ml-80 md:ml-0">
                             <Form img_url={img_url} setimg_url={setimg_url} />
                             <div className="grid grid-cols-3 mt-2 ml-2 gap-0 space-y-1">
 

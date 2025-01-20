@@ -60,10 +60,10 @@ const Item = ({ img_src, place, rating, price, stay_details, date, id }) => {
     return (
         <div className="h-full w-11/12 object-contain pb-10 mt-2" id="image-slider">
             <div className="w-full h-full">
-                <div className="w-full h-72">
+                <div className="w-full sm:h-72 h-64">
                     <Slider {...settings} ref={slider}>
                         {img_src.map((img, index) => (
-                            <div className="relative w-full h-72 rounded-xl justify-center items-center flex" key={index}>
+                            <div className="relative w-full sm:h-72 h-64 rounded-xl justify-center items-center flex" key={index}>
                                 <button className="absolute bg-black top-4 right-4 rounded-xl text-white text-sm h-8 w-8 " onClick={handleClick} style={{ backgroundColor: active ? "red" : "black" }}>
                                     <i class='bx bx-heart' style={{ fontSize: "1rem" }}></i>
                                 </button>

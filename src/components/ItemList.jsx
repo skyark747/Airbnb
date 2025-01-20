@@ -11,10 +11,10 @@ const ItemList = () => {
     }
 
     return (
-        <div className="w-full h-auto" id="items">
+        <div className="w-full h-auto " id="items">
             <div
-                className="w-95 h-auto gap-1 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ml-4 md:ml-8 lg:ml-16
-                "
+                className="sm:w-95 w-10/12 h-auto gap-1 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ml-9 md:ml-8 lg:ml-16
+                sm:ml-11 "
             >
                 {FilterItems.map((item, index) => (
                     <Item

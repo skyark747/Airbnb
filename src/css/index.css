@@ -40,7 +40,6 @@
     border-radius: 50px;
     justify-content: space-around;
     transition: 0.2s ease-in-out;
-    width: 6rem;
 }
 
 #login:hover {
