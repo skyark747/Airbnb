@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Listings from "../jsfiles/Context";
+import Listings from "../globalcontext/Listings.js";
 const SearchCityPart = ({ name }) => {
 
     const { FilterItems, setFilterItems } = useContext(Listings);

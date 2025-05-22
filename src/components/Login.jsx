@@ -72,9 +72,7 @@ const Login = ({ setShowLogin }) => {
                             )
                         }
                         <h2 >{textdisplay}</h2>
-                        <button class="text-gray-500 hover:text-gray-700" aria-label="Close" onClick={() => setShowLogin(false)}>
-                            &times;
-                        </button>
+                        
                     </div>
 
                     <form class="space-y-4">

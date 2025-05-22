@@ -18,12 +18,12 @@ dotenv.config();
 let client;
 
 
-async function fetchListings(name) {
+async function fetchListings(name,page,limit) {
     try {
         const database = client.db("sample_airbnb");
         const collection = database.collection(name);
-
-        const listings = await collection.find().toArray();
+        let skip=(page-1)*limit;
+        const listings = await collection.find().skip(skip).limit(limit).toArray();
         return listings;
     } catch (error) {
         console.error("Error fetching listings:", error);
@@ -32,11 +32,29 @@ async function fetchListings(name) {
 }
 
 //retrieve the specific collection from the database
-app.get('/api/listings/:name', async (req, res) => {
+app.get('/api/listings/:name/:page/:limit', async (req, res) => {
     let name = req.params.name;
+    let page=parseInt(req.params.page,10);
+    let limit=parseInt(req.params.limit,10);
     try {
-        const listings = await fetchListings(name);
+        const listings = await fetchListings(name,page,limit);
+        
         res.send(listings);
+    } catch (error) {
+        console.error("Error fetching listings:", error);
+        res.status(500).send({ error: "Failure" });
+    }
+});
+
+app.get('/api/listingscount/:name', async (req, res) => {
+    const name=req.params.name;
+    try {
+        const database = client.db("sample_airbnb");
+        const collection = database.collection(name);
+        const listingscount=await collection.countDocuments();
+        
+        res.json(listingscount);
+
     } catch (error) {
         console.error("Error fetching listings:", error);
         res.status(500).send({ error: "Failure" });

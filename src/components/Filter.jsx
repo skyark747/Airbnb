@@ -8,11 +8,12 @@ import { BiBed, BiCoffee } from 'react-icons/bi'; // Bed Icons
 import { FaTicketAlt, FaFilm } from 'react-icons/fa'; // Ticket Icons
 import { MdPlace } from 'react-icons/md'; // Place Icons
 import { GiCastle, GiHouse, GiMountainCave, GiAlienSkull, GiTowerBridge, GiAlienBug } from 'react-icons/gi'; // Game Icons
-import Listings from "../jsfiles/Context";
+import Listings from "../globalcontext/Listings.js";
 import Button from "../smallcomponents/AddButton";
 import Add_Listing from "./AddListing";
 import Admin from "../globalcontext/AdminContext";
 import { useNavigate } from "react-router-dom";
+import Pages from "../globalcontext/pages";
 
 
 const Filter = () => {
@@ -21,17 +22,19 @@ const Filter = () => {
     const { Filteritems, setFilterItems } = useContext(Listings);
     const [listing, setlisting] = useState(false);
     const { IsAdmin, setIsAdmin } = useContext(Admin);
-    const [slidestoshow,setslidestoshow]=useState(6);
+    const [slidestoshow, setslidestoshow] = useState(6);
+    const { page, setpage } = useContext(Pages);
+    
     const navigate = useNavigate();
     useEffect(() => {
         const handleResize = () => {
-          setslidestoshow(window.innerWidth < 640 ? 3 : 6);
+            setslidestoshow(window.innerWidth < 640 ? 3 : 6);
         };
         window.addEventListener('resize', handleResize);
         handleResize(); // Initial call
         return () => window.removeEventListener('resize', handleResize);
-      }, []);
-    
+    }, []);
+
     var settings = {
         dots: false,
         infinite: true,
@@ -86,16 +89,37 @@ const Filter = () => {
     function viewbookings() {
         navigate("/view/bookings");
     }
-    
+
 
     async function getlisting(name) {
         try {
 
-            const path = `http://localhost:3000/api/listings/${name}`;
+            const path = `http://localhost:3000/api/listings/${name}/${page}/${8}`;
 
             const res = await fetch(path);
             const data = await res.json();
-            setFilterItems(data);
+            if (data.length==0) {
+                setpage(page-1)
+            }
+            else {
+                setFilterItems(data);
+            }
+            return data;
+
+        } catch (err) {
+            console.error(err);
+        }
+    };
+    async function getlistingcount(name) {
+        try {
+
+            const path = `http://localhost:3000/api/listingscount/${name}`;
+
+            const res = await fetch(path);
+            const data = await res.json();
+            const count=parseInt(data,10)
+            settotalpages(count);
+
         } catch (err) {
             console.error(err);
         }
@@ -140,8 +164,11 @@ const Filter = () => {
     }
 
     useEffect(() => {
+        
+        getlistingcount(value);
         handleClick(value);
-    }, [value]);
+        
+    }, [value, page]);
 
 
     return (
@@ -156,11 +183,11 @@ const Filter = () => {
                                     Items.map((item, index) => (
 
                                         <a href="#" key={index} onClick={(e) => Setvalue(e.currentTarget.textContent)} className="w-12 h-16 justify-center items-center align-center " id="slider">
-                                            
+
                                             <div href="#" className="flex flex-col justify-center items-center w-3/4 h-full" id="check-hover">{item.icon}
-                                                    <p className="font-semibold text-sm text-gray-500 mt-2 ">{item.name}</p>
+                                                <p className="font-semibold text-sm text-gray-500 mt-2 ">{item.name}</p>
                                             </div>
-                                            
+
                                         </a>
                                     ))
 

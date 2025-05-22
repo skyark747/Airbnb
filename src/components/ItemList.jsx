@@ -1,10 +1,16 @@
 import { useContext } from "react";
 import Item from "./Item";
-import Listings from "../jsfiles/Context";
+import Listings from "../globalcontext/Listings.js";
 import Loader from "../smallcomponents/Loader";
+import Button from "../smallcomponents/Showmore";
+import Pages from "../globalcontext/pages";
+import ButtonP from "../smallcomponents/Prevpage";
+
 
 const ItemList = () => {
     const { FilterItems } = useContext(Listings);
+    const { page, setpage } = useContext(Pages);
+    
 
     if (!FilterItems) {
         return <Loader />;
@@ -28,6 +34,11 @@ const ItemList = () => {
                         id={item.id}
                     />
                 ))}
+            </div>
+            <div className="w-95 flex md:justify-end justify-center items-center mb-2 space-x-2">
+
+                <ButtonP page={page} setpage={setpage} />
+                <Button page={page} setpage={setpage} />
             </div>
         </div>
     );
